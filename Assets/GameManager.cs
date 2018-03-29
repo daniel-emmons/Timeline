@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManger : MonoBehaviour {
-
+public class GameManager : Singleton<GameManager> {
 
     public TimelineState timelineState = TimelineState.Active;
 

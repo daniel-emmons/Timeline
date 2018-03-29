@@ -45,16 +45,10 @@ public class TimelineManager : MonoBehaviour {
     //UIComponents
     [SerializeField]
     public Text clockDisplay;
-
-    //References
-    GameManger gameManager;
     
 	// Use this for initialization
 	void Start () {
-        gameManager = GetComponent<GameManger>();
-        if (gameManager == null) Debug.LogError("cannot finnd attached GameManager component in " + name);
-
-
+        
 	}
 	
 	// Update is called once per frame
@@ -72,10 +66,10 @@ public class TimelineManager : MonoBehaviour {
 
     void ReadState()
     {
-        if (gameManager.timelineState == TimelineState.Active) timelineIsActive = true;
+        if (GameManager.Instance.timelineState == TimelineState.Active) timelineIsActive = true;
         else timelineIsActive = false;
 
-        if (gameManager.timelineState == TimelineState.Paused) timelineIsPaused = true;
+        if (GameManager.Instance.timelineState == TimelineState.Paused) timelineIsPaused = true;
         else timelineIsPaused = false;
     }
 
