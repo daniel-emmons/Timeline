@@ -43,15 +43,16 @@ public class NPCScript : MonoBehaviour {
     /// </summary>
     private void PerformTask()
     {
-        Vector3 goalPosition = CurrentTask.GoalPosition;
-        Vector3 startPosition = CurrentTask.StartPosition;
+        MovementGameTask movementTask = (MovementGameTask)CurrentTask;
+        Vector3 goalPosition = movementTask.GoalPosition;
+        Vector3 startPosition = movementTask.StartPosition;
         TimeSpan goalTime = CurrentTask.GoalTime;
         TimeSpan startTime = CurrentTask.StartTime;
 
         if (TimeManager.Instance.TimeScale < 0)
         {
-            goalPosition = CurrentTask.StartPosition;
-            startPosition = CurrentTask.GoalPosition;
+            goalPosition = movementTask.StartPosition;
+            startPosition = movementTask.GoalPosition;
             goalTime = CurrentTask.StartTime;
             startTime = CurrentTask.GoalTime;
         }

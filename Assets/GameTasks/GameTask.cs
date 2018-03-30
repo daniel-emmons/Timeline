@@ -1,27 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using System;
+using UnityEngine;
 
-public class GameTask {
+public abstract class GameTask : ScriptableObject
+{
+    [SerializeField()]
+    private SerializableTimeSpan m_startTime;
 
-    /// <summary>
-    /// Where this NPC started.
-    /// </summary>
-    public Vector3 StartPosition;
+    [SerializeField()]
+    private SerializableTimeSpan m_goalTime;
 
-    /// <summary>
-    /// Where this NPC wants to go.
-    /// </summary>
-    public Vector3 GoalPosition;
+
 
     /// <summary>
     /// The time that this game task was started.
     /// </summary>
-    public TimeSpan StartTime;
+    public TimeSpan StartTime
+    {
+        get { return m_startTime.GetTimespan(); }
+        set { m_startTime = new SerializableTimeSpan(value); }
+    }
 
     /// <summary>
     /// When this NPC wants to reach their goal.
     /// </summary>
-    public TimeSpan GoalTime;
+    public TimeSpan GoalTime
+    {
+        get { return m_goalTime.GetTimespan(); }
+        set { m_goalTime = new SerializableTimeSpan(value); }
+    }
 }
