@@ -3,9 +3,14 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
-public class NPCScript : MonoBehaviour {
+public class NPC : MonoBehaviour {
+
+    public NPCBio Bio;
+    public NPCSchedule Schedule;
 
     public GameTask CurrentTask;
+
+    private List<NPCGoal> m_goals = new List<NPCGoal>();
 
     private List<GameTask> m_taskHistory = new List<GameTask>();
     private int m_currentTaskIndex = 0;
@@ -13,7 +18,6 @@ public class NPCScript : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-
         // Start with a task.
         SetNextTask();
     }
@@ -37,6 +41,7 @@ public class NPCScript : MonoBehaviour {
             SetPreviousTask();
         }
     }
+
 
     /// <summary>
     /// Move.

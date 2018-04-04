@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "GameTask", menuName = "GameTask/MovementGameTask")]
 public class MovementGameTask : GameTask
 {
-
     /// <summary>
     /// Where this NPC started.
     /// </summary>

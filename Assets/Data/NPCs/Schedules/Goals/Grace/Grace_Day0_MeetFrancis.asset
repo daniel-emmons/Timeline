@@ -8,8 +8,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d99c0a4e48811d248a63c6b5c1f36d49, type: 3}
-  m_Name: GameTask
+  m_Script: {fileID: 11500000, guid: f110240a57f03fc4ea4e992592d5e6a4, type: 3}
+  m_Name: Grace_Day0_MeetFrancis
   m_EditorClassIdentifier: 
-  StartPosition: {x: 0, y: 0, z: 0}
-  GoalPosition: {x: 0, y: 0, z: 0}
+  m_goalTime:
+    Days: 0
+    Hours: 1
+    Minutes: 10
+    Seconds: 0
+    Milliseconds: 0
+  GoalPosition: {x: 27, y: 12}
