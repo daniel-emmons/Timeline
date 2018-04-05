@@ -13,3 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DisplayName: Benny
   WalkSpeed: 10
+  Schedule: {fileID: 11400000, guid: 53652c1e1f685304996e4b09fea9891b, type: 2}

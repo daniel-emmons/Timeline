@@ -6,7 +6,6 @@ using UnityEngine;
 public class NPC : MonoBehaviour {
 
     public NPCBio Bio;
-    public NPCSchedule Schedule;
 
     public GameTask CurrentTask;
 

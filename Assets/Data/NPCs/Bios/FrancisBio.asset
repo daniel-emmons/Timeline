@@ -13,3 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DisplayName: Francis
   WalkSpeed: 10
+  Schedule: {fileID: 11400000, guid: aa2db26496a153f45a0a1e765b414ed9, type: 2}

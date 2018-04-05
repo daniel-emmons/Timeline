@@ -17,4 +17,10 @@ public class NPCBio : ScriptableObject
     /// </summary>
     [SerializeField()]
     public float WalkSpeed;
+
+    /// <summary>
+    /// The goals that this NPC has planned for the entire game.
+    /// </summary>
+    [SerializeField()]
+    public NPCSchedule Schedule;
 }

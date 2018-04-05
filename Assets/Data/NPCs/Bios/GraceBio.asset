@@ -13,3 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DisplayName: Grace
   WalkSpeed: 15
+  Schedule: {fileID: 11400000, guid: 49b11673f0bea554e893478a34c55489, type: 2}

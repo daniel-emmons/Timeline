@@ -13,3 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DisplayName: Julie
   WalkSpeed: 10
+  Schedule: {fileID: 11400000, guid: 456938173fe7b5a4780578b56609721e, type: 2}
