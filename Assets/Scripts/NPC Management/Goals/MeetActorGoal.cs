@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NPC Goal", menuName = "NPC/Goal/Meet NPC")]
-public class MeetNPCGoal : NPCGoal
+public class MeetActorGoal : ActorGoal
 {
     /// <summary>
     /// The position where this NPC will go to meet another NPC.

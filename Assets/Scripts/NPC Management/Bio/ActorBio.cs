@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewNPCBio", menuName = "NPC/Bio")]
-public class NPCBio : ScriptableObject
+public class ActorBio : ScriptableObject
 {
     [Header("Attributes")]
     /// <summary>
@@ -22,7 +22,7 @@ public class NPCBio : ScriptableObject
     /// The goals that this NPC has planned for the entire game.
     /// </summary>
     [SerializeField()]
-    public NPCSchedule Schedule;
+    public ActorSchedule Schedule;
 
     [Header("Curves")]
 

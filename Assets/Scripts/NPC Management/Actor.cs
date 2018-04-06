@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
-public class NPC : MonoBehaviour {
+public class Actor {
 
-    public NPCBio Bio;
+    public ActorBio Bio;
 
     public GameTask CurrentTask;
 
-    private List<NPCGoal> m_goals = new List<NPCGoal>();
+    public ActorObject ActorObject;
 
     private List<GameTask> m_taskHistory = new List<GameTask>();
     private int m_currentTaskIndex = 0;
 
-    // Use this for initialization
-    void Start()
+    public Actor()
     {
         // Start with a task.
         SetNextTask();
@@ -24,10 +23,30 @@ public class NPC : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        // Determine my next goal.
+        UpdateCurrentGoal();
 
-        // Move to the goal position;
-        PerformTask();
+        // Set a task to accomplish that goal.
+        UpdateCurrentTask();
 
+        // Execute my current task.
+        PerformCurrentTask();
+    }
+
+    /// <summary>
+    /// Look at my schedule and determine what my current goal should be.
+    /// </summary>
+    private void UpdateCurrentGoal()
+    {
+
+    }
+
+    /// <summary>
+    /// Check my current task, current goal, current time, etc and determine what I should be doing.
+    /// This should use Utility AI to determine what I should be doing.
+    /// </summary>
+    private void UpdateCurrentTask()
+    {
         // Handle the end time of the task.
         if (TimeManager.Instance.IsPassedTime(CurrentTask.GoalTime))
         {
@@ -41,11 +60,10 @@ public class NPC : MonoBehaviour {
         }
     }
 
-
     /// <summary>
     /// Move.
     /// </summary>
-    private void PerformTask()
+    private void PerformCurrentTask()
     {
         MovementGameTask movementTask = (MovementGameTask)CurrentTask;
         Vector3 goalPosition = movementTask.GoalPosition;
@@ -60,13 +78,13 @@ public class NPC : MonoBehaviour {
             goalTime = CurrentTask.StartTime;
             startTime = CurrentTask.GoalTime;
         }
-        if (transform.position != goalPosition)
+        if (ActorObject.transform.position != goalPosition)
         {
             float totalDistance = Vector3.Distance(startPosition, goalPosition);
             TimeSpan totalTime = goalTime - startTime;
             float moveSpeed = (totalDistance / TimeManager.Instance.GetRealSecondsFromGameSeconds((float)totalTime.TotalSeconds)) * TimeManager.Instance.TimeScale;
 
-            transform.position += (goalPosition - transform.position).normalized * moveSpeed * Time.deltaTime;
+            ActorObject.transform.position += (goalPosition - ActorObject.transform.position).normalized * moveSpeed * Time.deltaTime;
         }
     }
 
@@ -79,7 +97,7 @@ public class NPC : MonoBehaviour {
 
         if (m_currentTaskIndex >= m_taskHistory.Count)
         {
-            CurrentTask = GameTaskFactory.GenerateGameTask(transform.position);
+            CurrentTask = GameTaskFactory.GenerateGameTask(ActorObject.transform.position);
             m_taskHistory.Add(CurrentTask);
             m_currentTaskIndex = m_taskHistory.Count - 1;
         }

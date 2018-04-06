@@ -135,11 +135,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 279445316}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61a9d3f2cf4c74b4da0b5c93ee7d7984, type: 3}
+  m_Script: {fileID: 11500000, guid: ec2f27e25c24e6f4da89e4e608034b92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bio: {fileID: 11400000, guid: bfba4253132167b4ca2fe55d987bd0b8, type: 2}
-  Schedule: {fileID: 11400000, guid: 456938173fe7b5a4780578b56609721e, type: 2}
 --- !u!23 &279445318
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -396,11 +394,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 307988382}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61a9d3f2cf4c74b4da0b5c93ee7d7984, type: 3}
+  m_Script: {fileID: 11500000, guid: ec2f27e25c24e6f4da89e4e608034b92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bio: {fileID: 11400000, guid: 5279c3a9a7677fa43b20946ff2df4552, type: 2}
-  Schedule: {fileID: 11400000, guid: 53652c1e1f685304996e4b09fea9891b, type: 2}
 --- !u!1 &309350889
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,11 +583,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1045767291}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61a9d3f2cf4c74b4da0b5c93ee7d7984, type: 3}
+  m_Script: {fileID: 11500000, guid: ec2f27e25c24e6f4da89e4e608034b92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bio: {fileID: 11400000, guid: 7ff53298e2d358646a9c5479dbf3ce69, type: 2}
-  Schedule: {fileID: 11400000, guid: aa2db26496a153f45a0a1e765b414ed9, type: 2}
 --- !u!23 &1045767293
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1181,11 +1175,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1941589272}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61a9d3f2cf4c74b4da0b5c93ee7d7984, type: 3}
+  m_Script: {fileID: 11500000, guid: ec2f27e25c24e6f4da89e4e608034b92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bio: {fileID: 11400000, guid: c10c826c64328554384de8a653cbc6b1, type: 2}
-  Schedule: {fileID: 11400000, guid: 49b11673f0bea554e893478a34c55489, type: 2}
 --- !u!23 &1941589274
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -1,8 +1,8 @@
 using Rotorz.ReorderableList;
 using UnityEditor;
 
-[CustomEditor(typeof(NPCSchedule))]
-public class NPCScheduleEditor : Editor {
+[CustomEditor(typeof(ActorSchedule))]
+public class ActorScheduleEditor : Editor {
 
 	private SerializedProperty m_schedule;
 

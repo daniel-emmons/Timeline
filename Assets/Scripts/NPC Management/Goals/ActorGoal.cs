@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
-public abstract class NPCGoal : ScriptableObject
+public abstract class ActorGoal : ScriptableObject
 {
     [SerializeField()]
     private SerializableTimeSpan m_goalTime;
