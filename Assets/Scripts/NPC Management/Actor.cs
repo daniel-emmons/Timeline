@@ -8,20 +8,28 @@ public class Actor {
     public ActorBio Bio;
 
     public GameTask CurrentTask;
+    public Vector2 CurrentPosition;
 
     public ActorObject ActorObject;
+
+    private ActorGoal m_currentGoal;
 
     private List<GameTask> m_taskHistory = new List<GameTask>();
     private int m_currentTaskIndex = 0;
 
+    /// <summary>
+    /// Constructor for initialization.
+    /// </summary>
     public Actor()
     {
         // Start with a task.
-        SetNextTask();
+        //SetNextTask();
     }
 
-    // Update is called once per frame
-    void Update()
+    /// <summary>
+    /// Perform standard AI and tasks.
+    /// </summary>
+    public void Update()
     {
         // Determine my next goal.
         UpdateCurrentGoal();
@@ -38,7 +46,26 @@ public class Actor {
     /// </summary>
     private void UpdateCurrentGoal()
     {
+        if(Bio == null)
+        {
+            return;
+        }
 
+        // Iterate my goals. For now, assume they are sorted by time.
+        foreach(var goal in Bio.Schedule.Schedule)
+        {
+            // If we have missed this goal, skip it and move on.
+            if (TimeManager.Instance.IsPassedTime(goal.GoalTime))
+            {
+                continue;
+            }
+
+            // Check any other pre-conditions.
+
+            // This goal is the next available goal (assuming sorted by time).
+            m_currentGoal = goal;
+            return;
+        }
     }
 
     /// <summary>
@@ -47,8 +74,12 @@ public class Actor {
     /// </summary>
     private void UpdateCurrentTask()
     {
+        // Use Utility AI to determine what I should be doing.
+        // Look at my current goal, the time it will take to complete that goal, and my other needs.
+
+
         // Handle the end time of the task.
-        if (TimeManager.Instance.IsPassedTime(CurrentTask.GoalTime))
+        if (CurrentTask == null || TimeManager.Instance.IsPassedTime(CurrentTask.GoalTime))
         {
             SetNextTask();
         }

@@ -21,5 +21,5 @@ public abstract class ActorGoal : ScriptableObject
     /// <summary>
     /// Every goal needs a way of estimating how long it will take to complete.
     /// </summary>
-    public abstract float GetTimeToCompleteInSeconds();
+    public abstract TimeSpan GetTimeToComplete(Actor actor);
 }

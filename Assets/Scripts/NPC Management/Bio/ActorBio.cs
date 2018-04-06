@@ -19,6 +19,12 @@ public class ActorBio : ScriptableObject
     public float WalkSpeed;
 
     /// <summary>
+    /// The starting world space position of this character.
+    /// </summary>
+    [SerializeField()]
+    public Vector2 StartingPosition;
+
+    /// <summary>
     /// The goals that this NPC has planned for the entire game.
     /// </summary>
     [SerializeField()]
