@@ -48,6 +48,7 @@ public class Actor {
     {
         if(Bio == null)
         {
+            Debug.LogWarning("No Bio Available for " + ActorObject.name);
             return;
         }
 
