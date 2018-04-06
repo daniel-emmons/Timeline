@@ -23,4 +23,12 @@ public class NPCBio : ScriptableObject
     /// </summary>
     [SerializeField()]
     public NPCSchedule Schedule;
+
+    [Header("Curves")]
+
+    /// <summary>
+    /// The curve that represents this NPC's urgency to meet with other people.
+    /// </summary>
+    [SerializeField()]
+    public AnimationCurve MeetingUtility;
 }

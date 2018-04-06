@@ -14,3 +14,21 @@ MonoBehaviour:
   DisplayName: Francis
   WalkSpeed: 10
   Schedule: {fileID: 11400000, guid: aa2db26496a153f45a0a1e765b414ed9, type: 2}
+  MeetingUtility:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
